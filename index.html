@@ -1,0 +1,241 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hidden {
+            display: none;
+        }
+        .slide-in {
+            animation: slide-in 0.5s forwards;
+        }
+        .slide-out {
+            animation: slide-out 0.5s forwards;
+        }
+        .slide-in-top {
+            animation: slide-in-top 0.5s forwards;
+        }
+        .slide-out-top {
+            animation: slide-out-top 0.5s forwards;
+        }
+        .slide-in-bottom {
+            animation: slide-in-bottom 0.5s forwards;
+        }
+        .slide-out-bottom {
+            animation: slide-out-bottom 0.5s forwards;
+        }
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        @keyframes slide-in-top {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slide-out-top {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+        @keyframes slide-in-bottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slide-out-bottom {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-6">
+        <nav class="flex space-x-6">
+            <a class="text-yellow-500" href="#" id="home-link">HOME</a>
+            <a class="hover:text-yellow-500 cursor-pointer" id="portfolio-link">PORTFOLIO</a>
+            <a class="hover:text-yellow-500 cursor-pointer" id="skill-link">SKILL</a>
+            <a class="hover:text-yellow-500 cursor-pointer" id="certification-link">CERTIFICATION</a>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center justify-center min-h-screen" id="main-content">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold">Hello,</h1>
+            <h2 class="text-4xl font-bold mt-2">I Am Mochamad Abdul Rouf</h2>
+            <p class="text-lg mt-4">System Administrator Enthusiast | Cyber Security Enthusiast | DevOps Enthusiast</p>
+            <p class="text-lg mt-1">Study At SMK NEGERI 1 NGLEGOK</p>
+        </div>
+        <div class="mt-8">
+            <img alt="Portrait of Agus Sugandi in a suit with a medal" class="rounded-full border-4 border-yellow-500" height="300" src="https://storage.googleapis.com/a1aa/image/CDKGUi5yGn4EAh86jeDeTw5FzXQowi2ImHiULqZCSuGEkP1TA.jpg" width="200"/>
+        </div>
+        <div class="flex space-x-4 mt-8">
+            <a class="text-white hover:text-yellow-500" href="https://www.instagram.com/yourprofile" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="text-white hover:text-yellow-500" href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="mt-4">
+            <a class="text-yellow-500" href="#">Download Curriculum Vitae</a>
+        </div>
+        <div class="mt-8 text-center">
+            <h3 class="text-2xl font-bold">Contact</h3>
+            <p class="text-lg mt-2">Email: mochamadabdulrouf1@gmail.com</p>
+            <p class="text-lg mt-1">Phone: +62 857232424</p>
+        </div>
+    </main>
+    <div class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center" id="portfolio-tab">
+        <div class="bg-gray-800 p-8 rounded-lg w-3/4 max-w-4xl">
+            <h3 class="text-2xl font-bold mb-4">Portfolio</h3>
+            <ul class="space-y-2">
+                <li><a class="text-yellow-500 hover:underline" href="#">Project 1</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Project 2</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Project 3</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Project 4</a></li>
+            </ul>
+            <button class="mt-6 px-6 py-3 bg-yellow-500 text-gray-900 font-bold rounded" id="close-portfolio">Close</button>
+        </div>
+    </div>
+    <div class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center" id="skill-tab">
+        <div class="bg-gray-800 p-8 rounded-lg w-3/4 max-w-4xl">
+            <h3 class="text-2xl font-bold mb-4">Skills</h3>
+            <ul class="flex space-x-8">
+                <li><i class="fab fa-html5 text-6xl text-yellow-500"></i></li>
+                <li><i class="fab fa-css3-alt text-6xl text-yellow-500"></i></li>
+                <li><i class="fab fa-js-square text-6xl text-yellow-500"></i></li>
+            </ul>
+            <button class="mt-6 px-6 py-3 bg-yellow-500 text-gray-900 font-bold rounded" id="close-skill">Close</button>
+        </div>
+    </div>
+    <div class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center" id="certification-tab">
+        <div class="bg-gray-800 p-8 rounded-lg w-3/4 max-w-4xl">
+            <h3 class="text-2xl font-bold mb-4">Certifications</h3>
+            <ul class="space-y-2">
+                <li><a class="text-yellow-500 hover:underline" href="#">Certification 1</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Certification 2</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Certification 3</a></li>
+                <li><a class="text-yellow-500 hover:underline" href="#">Certification 4</a></li>
+            </ul>
+            <button class="mt-6 px-6 py-3 bg-yellow-500 text-gray-900 font-bold rounded" id="close-certification">Close</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('portfolio-link').addEventListener('click', function() {
+            document.getElementById('main-content').classList.add('slide-out');
+            setTimeout(function() {
+                document.getElementById('main-content').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('slide-out');
+                document.getElementById('portfolio-tab').classList.remove('hidden');
+                document.getElementById('portfolio-tab').classList.add('slide-in');
+                document.getElementById('home-link').classList.remove('text-yellow-500');
+                document.getElementById('portfolio-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+
+        document.getElementById('close-portfolio').addEventListener('click', function() {
+            document.getElementById('portfolio-tab').classList.add('slide-out');
+            setTimeout(function() {
+                document.getElementById('portfolio-tab').classList.add('hidden');
+                document.getElementById('portfolio-tab').classList.remove('slide-out');
+                document.getElementById('main-content').classList.remove('hidden');
+                document.getElementById('main-content').classList.add('slide-in');
+                document.getElementById('portfolio-link').classList.remove('text-yellow-500');
+                document.getElementById('home-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+
+        document.getElementById('skill-link').addEventListener('click', function() {
+            document.getElementById('main-content').classList.add('slide-out-top');
+            setTimeout(function() {
+                document.getElementById('main-content').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('slide-out-top');
+                document.getElementById('skill-tab').classList.remove('hidden');
+                document.getElementById('skill-tab').classList.add('slide-in-top');
+                document.getElementById('home-link').classList.remove('text-yellow-500');
+                document.getElementById('skill-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+
+        document.getElementById('close-skill').addEventListener('click', function() {
+            document.getElementById('skill-tab').classList.add('slide-out-top');
+            setTimeout(function() {
+                document.getElementById('skill-tab').classList.add('hidden');
+                document.getElementById('skill-tab').classList.remove('slide-out-top');
+                document.getElementById('main-content').classList.remove('hidden');
+                document.getElementById('main-content').classList.add('slide-in-top');
+                document.getElementById('skill-link').classList.remove('text-yellow-500');
+                document.getElementById('home-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+
+        document.getElementById('certification-link').addEventListener('click', function() {
+            document.getElementById('main-content').classList.add('slide-out-bottom');
+            setTimeout(function() {
+                document.getElementById('main-content').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('slide-out-bottom');
+                document.getElementById('certification-tab').classList.remove('hidden');
+                document.getElementById('certification-tab').classList.add('slide-in-bottom');
+                document.getElementById('home-link').classList.remove('text-yellow-500');
+                document.getElementById('certification-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+
+        document.getElementById('close-certification').addEventListener('click', function() {
+            document.getElementById('certification-tab').classList.add('slide-out-bottom');
+            setTimeout(function() {
+                document.getElementById('certification-tab').classList.add('hidden');
+                document.getElementById('certification-tab').classList.remove('slide-out-bottom');
+                document.getElementById('main-content').classList.remove('hidden');
+                document.getElementById('main-content').classList.add('slide-in-bottom');
+                document.getElementById('certification-link').classList.remove('text-yellow-500');
+                document.getElementById('home-link').classList.add('text-yellow-500');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
